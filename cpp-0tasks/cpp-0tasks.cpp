@@ -21,16 +21,18 @@ int main() {
     cout << "Box 1 == Box 2: "<< (box0 == box1) << endl;
 
     Box cinBox;
+    Container container(100, 100, 100, 100);
+    cout << container;
     cin >> cinBox;
     cout << cinBox << endl;
-    Container container(100, 100, 100, 100);
     container.addBox(box0);
     container.addBox(box1);
     container.addBox(box2);
-    cout << container;
+    cout << "Добавили коробки в контейнер \n" << container << endl;
     container.addBoxByIndex(2, cinBox);
-    cout << container;
-    container.deleteBoxByIndex(2);
+    cout << "Добавили коробку на (2) место, если суммарный вес коробок меньше веса контейнера\n" << container << endl;
+    container.deleteBoxByIndex(1);
+    cout << "Удалили коробку (1) " << endl;
     cout << "В контейнере " << container.countBoxes() << " коробки" << endl;
     cout << container;
 }
